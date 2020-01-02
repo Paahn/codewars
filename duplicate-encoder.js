@@ -13,9 +13,9 @@ Examples
 function duplicateEncode(word){
   let letterCount = {};
   let letters = word.toLowerCase().split('');
-
+// letterCount will be 0 if we havent come across this letter before in the forEach, otherwise add +1 to its count 
   letters.forEach(function(letter) {
-    letterCount[letter] = (letterCount[letter] || 0) + 1;
+    letterCount[letter] = (letterCount[letter] || 0) + 1; 
   });
 
   return letters.map(function(letter) {
