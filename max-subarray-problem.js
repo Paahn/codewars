@@ -14,13 +14,13 @@ list or array is also a valid sublist/subarray.
 
 var maxSequence = function(arr){
   let maxSum = 0;
-  let runningSum = 0;
+  let runningSum = 0; // adding up the items on the array from the start
 
   for (let item of arr) {
     runningSum += item;
-    maxSum = Math.max(maxSum, runningSum);
+    maxSum = Math.max(maxSum, runningSum); // compare the biggest sum from before with our current sum
     if (runningSum < 0) {
-      runningSum = 0;
+      runningSum = 0; // it will eventually return 0 if items til now result in a negative sum
     }
   }
   return maxSum;
